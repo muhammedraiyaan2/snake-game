@@ -60,3 +60,13 @@ body{
     font-style: italic;
     font-family: 'New Tegomin', serif;
 }
+@media screen and (max-height:1000px) and (min-height:700px) {
+    #board{
+        margin-top: -20px;
+    }
+}
+@media screen and (max-height:2000px) and (min-height:1000px){
+    #board{
+        margin-top: 20px;
+    }
+}
