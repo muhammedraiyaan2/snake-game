@@ -14,7 +14,7 @@ body{
     align-items:center;
 }
 #board{
-    margin-top:-70px;
+    margin-top:-40px;
     background-image: linear-gradient(to bottom right,rgb(170,236,170),rgb(238, 238, 165));
     /* background-image:radial-gradient(circle,rgb(238, 238, 165),rgb(170,236,170)); */
     height: 92vmin;
