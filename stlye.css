@@ -1,72 +1,151 @@
-*{
-    padding:0;
-    margin:0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-image:url(background.jpg);
-    min-height: 100vh;
-    background-size: 100vw 100vh;
-    background-repeat:no-repeat;
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto:wght@300&display=swap");
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #23262b;
+  height: 55px;
+  color: white;
+  font-family: "Roboto", sans-serif;
 }
-.body{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
 }
-#board{
-    margin-top:-60px;
-    background-image: linear-gradient(to bottom right,rgb(170,236,170),rgb(238, 238, 165));
-    /* background-image:radial-gradient(circle,rgb(238, 238, 165),rgb(170,236,170)); */
-    height: 92vmin;
-    width: 92vmin;
-    border: 3px solid black;
-    display: grid;
-    grid-template-rows: repeat(18,1fr);
-    grid-template-columns: repeat(18,1fr);
+nav ul li {
+  display: flex;
+  font-size: 15px;
+  margin-left: 12px;
+  align-items: center;
 }
-.head{
-    /* background-image: linear-gradient(to bottom right,purple,rgb(231, 176, 231)); */
-    background-image: linear-gradient(to bottom right,blue,lightblue);
-    /* height: 50px;
-    width: 50px; */
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+}
+.nav-title a{
+  font-size: 21.5px;
+}
+.nav-start {
+  margin-left: 15px;
+}
+/*  Game Design */
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.container {
+  display: flex;
+  display: grid;
+  position: relative;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  font-family: "Roboto", sans-serif;
+}
+.gameInfo {
+  font-family: "Baloo Bhaina 2", cursive;
+  padding: 0 34px;
+}
+.gif {
+  width: 200px;
+  height: 200px;
+}
+#reset{
+    cursor: pointer;
     border: 2px solid black;
-    border-radius: 5px;
+    background-color: blueviolet;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 7px;
+    font-size: 18px;
 }
-.food{
-    background-image: linear-gradient(to bottom right,red,rgb(255, 218, 218));
-    /* background: purple; */
-    /* height: 50px;
-    width: 50px;*/
-    border: 2px solid black;
-    border-radius: 5px; 
-} 
-.snake{
-    background-image: linear-gradient(to bottom right,green,rgb(203, 255, 203));
-    border: 2px solid black;
-    border-radius: 5px; 
+.box {
+  display: flex;
+  font-size: 8vw;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  cursor: pointer;
 }
-@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
-#scoreDisplay{
-    margin-left: 1000px;
-    font-weight: bold;
-    font-size:30px;
-    font-style: italic;
-    font-family: 'New Tegomin', serif;
+.box:hover {
+  background: rgb(242, 228, 255);
+  color: white;
 }
-#highscore{
-    margin-left: 1000px;
-    font-weight: bold;
-    font-size:30px;
-    font-style: italic;
-    font-family: 'New Tegomin', serif;
+.br-0 {
+  border-right: 0;
 }
-@media screen and (max-height:1000px) and (min-height:700px) {
-    #board{
-        margin-top: -20px;
-    }
+.bl-0 {
+  border-left: 0;
 }
-@media screen and (max-height:2000px) and (min-height:1000px){
-    #board{
-        margin-top: 20px;
-    }
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+.info{
+    font-size: 25px;
+}
+/* Line */
+.line{
+  background: red;
+  width: 0;
+  height:3px;
+  position: absolute;
+  transition: width 1s ease-in-out;
+}
+/* Media Query */
+@media screen and (max-width:460px) {
+  .know{
+    font-size: 10px;
+  }
+  nav ul li a{
+    font-size: 10px;
+  }
+  .line{
+    display: none;
+  }
+  .gameContainer{
+    top: 50px;
+    flex-wrap: wrap;
+    margin-left: 15%;
+    width: 70vw;
+  }
+  .info{
+    font-size: 15px;
+  }
+  .welcome{
+    font-size: 20px;
+  }
+  .gameInfo{
+    margin-top: 20px;
+  }
+  .container{
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+  }
+  .boxtext{
+    font-size: 40px;
+  }
+  .gif{
+    width: 100px;
+    height: 100px;
+  }
+  .nav-title a{
+    font-size: 14px;
+  }
+  #reset{
+    padding: 1px 5px;
+    font-size: 15px;
+  }
 }
