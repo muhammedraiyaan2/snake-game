@@ -95,22 +95,22 @@ window.requestAnimationFrame(main);
 window.addEventListener('keydown',e=>{
 inputDir={x:0,y:1} // Start the game
 switch(e.key){
-    case "ArrowUp":
+    case "w":
         inputDir.x=0;
         inputDir.y=-1;
         moveMu.play()
         break;
-    case "ArrowDown":
+    case "s":
         inputDir.x=0;
         inputDir.y=1;
         moveMu.play()
         break;
-    case "ArrowLeft":
+    case "a":
         inputDir.x=-1;
         inputDir.y=0;
         moveMu.play()
         break;
-    case "ArrowRight":
+    case "d":
         inputDir.x=1;
         inputDir.y=-0;
         moveMu.play()
