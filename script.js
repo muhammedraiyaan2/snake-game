@@ -115,6 +115,46 @@ switch(e.key){
         inputDir.y=-0;
         moveMu.play()
         break;
+    case "i":
+        inputDir.x=0;
+        inputDir.y=-1;
+        moveMu.play()
+        break;
+    case "k":
+        inputDir.x=0;
+        inputDir.y=1;
+        moveMu.play()
+        break;
+    case "j":
+        inputDir.x=-1;
+        inputDir.y=0;
+        moveMu.play()
+        break;
+    case "l":
+        inputDir.x=1;
+        inputDir.y=-0;
+        moveMu.play()
+        break;
+     case "ArrowUp":
+        inputDir.x=0;
+        inputDir.y=-1;
+        moveMu.play()
+        break;
+    case "ArrowDown":
+        inputDir.x=0;
+        inputDir.y=1;
+        moveMu.play()
+        break;
+    case "ArrowLeft":
+        inputDir.x=-1;
+        inputDir.y=0;
+        moveMu.play()
+        break;
+    case "ArrowRight":
+        inputDir.x=1;
+        inputDir.y=-0;
+        moveMu.play()
+        break;
     default:
         break;
 }
